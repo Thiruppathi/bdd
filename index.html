@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Behaviour Driven Development by Thiruppathi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Behaviour Driven Development</h1>
+      <h2 class="project-tagline">Brief Introduction &amp; Examples</h2>
+      <a href="https://github.com/Thiruppathi/bdd" class="btn">View on GitHub</a>
+      <a href="https://github.com/Thiruppathi/bdd/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Thiruppathi/bdd/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="behaviour-driven-development" class="anchor" href="#behaviour-driven-development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Behaviour Driven Development</h1>
+
+<h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>Behavior-Driven Development (BDD) is an agile process designed to keep the focus on stakeholder value throughout the whole project. The premise of BDD is that the requirement has to be written in a way that everyone understands it – business representative, analyst, developer, tester, manager, etc. The key is to have a unique set of artifacts that are understood and used by everyone. A BDD story is written by the whole team and used as both requirements and executable test cases. It is a way to perform test-driven development (TDD) with a clarity that can not be accomplished with unit testing. It is a way to describe and test functionality in (almost) natural language.</p>
+
+<h2>
+<a id="bdd-story-format" class="anchor" href="#bdd-story-format" aria-hidden="true"><span class="octicon octicon-link"></span></a>BDD Story Format</h2>
+
+<p>Even though there are different variations of the BDD story template, they all have two common elements:</p>
+
+<ol>
+<li><strong>Narrative</strong></li>
+<li><strong>Scenario</strong></li>
+</ol>
+
+<p>Each Narrative is followed by one or more Scenarios.</p>
+
+<p>The BDD story format looks like this:</p>
+
+<pre><code>Narrative:
+In order to [benefit]
+As a [role]
+I want to [feature]
+
+Scenario: [description]
+Given [context or precondition]
+When [event or action]
+Then [outcome validation]
+</code></pre>
+
+<h2>
+<a id="narrative" class="anchor" href="#narrative" aria-hidden="true"><span class="octicon octicon-link"></span></a>Narrative</h2>
+
+<p>A narrative is a short, simple description of a feature told from the perspective of a person or role that requires the new functionality. </p>
+
+<p>The intention of the narrative is NOT to provide a complete description of what is to be developed but to provide a basis for communication between all interested parties (business, analysts, developers, testers, etc.) </p>
+
+<p>The narrative shifts the focus from writing features to discussing them.</p>
+
+<p>Even though it is usually very short, it tries to answer three basic questions that are often overlooked in traditional requirements. </p>
+
+<ol>
+<li>What is the benefit or value that should be produced (In order to) ? </li>
+<li>Who needs it (As a) ? </li>
+<li>What is a feature or goal (I want to) ?</li>
+</ol>
+
+<p>With these questions answered, the team can start defining the best solution in collaboration with the stakeholders. </p>
+
+<p>The narrative is further defined through scenarios that provide a definition of done, and acceptance criteria that confirm that narrative that was developed fulfills expectations.</p>
+
+<pre><code>Narrative:
+In order to pay bills online
+As a customer
+I want to be able to save my card details
+</code></pre>
+
+<p><strong>Note:</strong>
+The written part of a BDD story is incomplete until discussions about that narrative occur and scenarios are written.</p>
+
+<p>For More information narratives can point to a diagram, workflow, spreadsheet, or any other external document.</p>
+
+<h3>
+<a id="how-narrative-is-different-from-requirement" class="anchor" href="#how-narrative-is-different-from-requirement" aria-hidden="true"><span class="octicon octicon-link"></span></a>How Narrative is Different From Requirement</h3>
+
+<p>Two most important differences between Narrative and Traditional Requirements are </p>
+
+<ol>
+<li>Precision</li>
+<li>Planning</li>
+</ol>
+
+<h4>
+<a id="precision" class="anchor" href="#precision" aria-hidden="true"><span class="octicon octicon-link"></span></a>Precision</h4>
+
+<p>Narratives favor verbal communication. Written language is very imprecise, and team members and stakeholders might interpret the requirement in a different way.</p>
+
+<h4>
+<a id="planning" class="anchor" href="#planning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Planning</h4>
+
+<p>IEEE 830 style requirements (“The system shall…”) often consist of hundreds or even thousands of statements. Planning such a large number of statements is extremely difficult. There are too many of them to be prioritized and estimated, and it is hard to understand which functionalities should be developed. 
+Consider the following requirements:</p>
+
+<ul>
+<li>The product shall have 4 wheels.</li>
+<li>The product shall have a steering wheel.</li>
+<li>The product shall be powered by electricity.</li>
+<li>The product shall be produced in different colors.</li>
+</ul>
+
+<p>Each of those statements can be developed and tested independently and assembled at the end of the process. </p>
+
+<p>The first image in someone’s head might be an electric-powered car. 
+That image is incorrect. </p>
+
+<p>It is a car, it has four wheels, it is powered by electrically-powered (rechargeable batteries) and it can be purchased in different colors. </p>
+
+<p>It is a car I bought for my 3-year-old daughter. That is probably not what you would think from reading those statements. </p>
+
+<p>A better description would be:</p>
+
+<pre><code>Narrative:
+In order to provide entertainment for children
+As a parent
+I want a small-sized car
+</code></pre>
+
+<p>By looking at this narrative, it is clear what the purpose is (entertainment for children), who needs it (parents), and what it is (a small-sized car). It does not provide all the details since the main purpose is to establish the communication that will result in more information and understanding of someone’s needs. </p>
+
+<p>That process might end with one narrative being split into many. Further on, scenarios produced from that narrative act as acceptance criteria, tests, and definition of done.</p>
+
+<h4>
+<a id="who-can-write-narratives" class="anchor" href="#who-can-write-narratives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who can write narratives?</h4>
+
+<p>Anyone can write narratives. Each member of the team can write BDD stories or parts of them (narrative or scenario). Whether all the narratives are written by one person (customer, business analyst, or product owner) or anyone can write them (developers, testers, etc) usually depends on the type of organization and customers. </p>
+
+<h4>
+<a id="good-story" class="anchor" href="#good-story" aria-hidden="true"><span class="octicon octicon-link"></span></a>Good Story</h4>
+
+<p>A good BDD narrative uses the “<strong>INVEST</strong>” model:</p>
+
+<ul>
+<li>Independent. Reduced dependencies = easier to plan.</li>
+<li>Negotiable. Details added via collaboration.</li>
+<li>Valuable. Provides value to the customer.</li>
+<li>Estimable. Too big or too vague = not estimable.</li>
+<li>Small. Can be done in less than a week by the team.</li>
+<li>Testable. Good acceptance criteria defined as scenarios.</li>
+</ul>
+
+<p>The actual work being done is accomplished through collaboration revolving around the narrative that becomes more detailed through scenarios as the development progresses. Narratives are at higher level than IEEE 830 requirements. Narratives are followed by collaboratively developed scenarios which define when the BDD story meets the expectations.</p>
+
+<h2>
+<a id="scenario" class="anchor" href="#scenario" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scenario</h2>
+
+<p>Scenarios describe interactions between user roles and the system. They are written in plain language with minimal technical details so that all stakeholders (customer, developers, testers, designers, marketing managers, etc) can have a common base for use in discussions, development, and testing.</p>
+
+<p>Scenarios are the acceptance criteria of the narrative. They represent the definition of done. Once all scenarios have been implemented, the story is considered finished. Scenarios can be written by anyone, with testers leading the effort.</p>
+
+<p>The whole process should be iterative within the sprint; as the development of the BDD story progresses, new scenarios can be written to cover cases not thought of before. The initial set of scenarios should cover the “happy path”. Alternative paths should be added progressively during the duration of the sprint.</p>
+
+<h3>
+<a id="format" class="anchor" href="#format" aria-hidden="true"><span class="octicon octicon-link"></span></a>Format</h3>
+
+<p>Scenarios consist of the following steps.</p>
+
+<ol>
+<li>Description - No Details; Should be less than 10 words</li>
+<li>Given - Precondition to be fullfilled</li>
+<li>When - Action or Event</li>
+<li>Then - Outcome of the Action</li>
+</ol>
+
+<p>Any number of Given,When &amp; Then steps can be combined; but atleast one of each must be present.</p>
+
+<h3>
+<a id="process" class="anchor" href="#process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Process</h3>
+
+<p>The following process should be followed.</p>
+
+<ol>
+<li>Write and discuss narrative.</li>
+<li>Write and discuss short descriptions of scenarios.</li>
+<li>Write steps for each scenario.</li>
+<li>Repeat steps 2 and 3 during the development of the narrative.</li>
+</ol>
+
+<h3>
+<a id="sample-scenarios" class="anchor" href="#sample-scenarios" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Scenarios</h3>
+
+<p>Let us write scenarios for following Narrative.</p>
+
+<pre><code>Narrative:
+In order to have a customized experience
+As a site visitor
+I want to be able to login
+</code></pre>
+
+<p>Once this feature has been discussed with representatives of the role (in this case a site visitor) the following initial conclusions can be drawn.</p>
+
+<p>Visitors should be able to register.
+Existing users should be able to log in.
+There should be an option to retrieve a password.
+These conclusions should be written as scenario descriptions.</p>
+
+<pre><code>Scenario: Visitors are able to register
+Scenario: Users are able to log in
+Scenario: Users are able to retrieve their password
+</code></pre>
+
+<p>Let us take the 1st scenario.</p>
+
+<pre><code>Scenario: Visitors are able to register
+</code></pre>
+
+<p>The Steps go as follows</p>
+
+<pre><code>Given the visitor is on the home screen
+When the visitor clicks the register button
+Then login screen is loaded
+When the visitor types his email
+When the visitor types his password
+When the visitor clicks the register button
+Then confirmation screen is loaded
+</code></pre>
+
+<p>Even though this scenario provides solid base, several steps are still missing. This situation is fairly common, because many steps are not obvious from the start.</p>
+
+<p>Further thoughts &amp; Discussion on the steps can help in introducing following additional steps.</p>
+
+<pre><code>Given the Visitor is NOT LOGGED IN
+</code></pre>
+
+<pre><code>When the visitor RE-TYPES the password
+</code></pre>
+
+<p>Further discussion and deep thinking will add a step</p>
+
+<pre><code>Then Welcome Text with FirstName is displayed
+</code></pre>
+
+<p>Through Several iterations, we can cover </p>
+
+<ul>
+<li>Happy Day Flow</li>
+<li>Negative Scenarios</li>
+<li>Validation Scenarios</li>
+<li>Confirmation Scenarios, etc.,</li>
+</ul>
+
+<h2>
+<a id="bdd-tools--frameworks" class="anchor" href="#bdd-tools--frameworks" aria-hidden="true"><span class="octicon octicon-link"></span></a>BDD Tools &amp; Frameworks</h2>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Thiruppathi/bdd">Behaviour Driven Development</a> is maintained by <a href="https://github.com/Thiruppathi">Thiruppathi</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
