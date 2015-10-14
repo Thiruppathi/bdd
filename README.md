@@ -209,6 +209,4 @@ Through Several iterations, we can cover
 - Validation Scenarios
 - Confirmation Scenarios, etc.,
 
-## BDD Tools & Frameworks
-
 
